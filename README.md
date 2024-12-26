@@ -3,16 +3,16 @@
 
 ## Progress Tracking
 
-- [ ] Indicates the problem is not yet solved
-- [x] Indicates the problem has been solved (will be updated as I progress)
+- [ ] not yet solved
+- [x] solved 
 
 ## Topics and Problems
 
 ### Arrays and Hashing
 
-- [ ] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
-- [ ] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
-- [ ] [Two Sum](https://leetcode.com/problems/two-sum/)
+- [x] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+- [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+- [x] [Two Sum](https://leetcode.com/problems/two-sum/)
 - [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 - [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
@@ -211,8 +211,3 @@
 - [ ] [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
 - [ ] [Detect Squares](https://leetcode.com/problems/detect-squares/)
 
-## Languages
-
-All problems are being solved in two languages:
-- Java
-- Python
