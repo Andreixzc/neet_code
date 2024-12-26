@@ -1,6 +1,5 @@
 # NeetCode Roadmap Solutions
 
-This repository contains my solutions to the algorithm problems from the NeetCode roadmap. I'm solving these problems in both Java and Python to improve my skills in both languages.
 
 ## Progress Tracking
 
