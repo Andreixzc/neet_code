@@ -8,24 +8,30 @@ using namespace std;
 
 bool isPalindrome(string s) {
     int i = 0;
-    int j = s.length();
+    int j = s.length() - 1;
     while (i < j) {
-        if (s[i] == ' ') i++;
-        if (s[j] == ' ') j--;
-        continue;
-        else {
-            if (s[i] != s[j]) return false;
+        if (!isalnum(s[i])) {
             i++;
-            j--;
+            continue;
         }
+        if (!isalnum(s[j])) {
+            j--;
+            continue;
+        }
+        if (s[i] >= 65 && s[i] <= 90) s[i] = s[i] + 32;
+        if (s[j] >= 65 && s[j] <= 90) s[j] = s[j] + 32;
+        if (s[i] != s[j]) return false;
+        i++;
+        j--;
     }
-    return false;
+    return true;
 }
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
+    string s = "0P";
+    cout << isPalindrome(s) << endl;
     return 0;
 }
-
