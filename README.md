@@ -13,25 +13,25 @@
 - [x] [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
-- [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
-- [ ] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
-- [ ] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
-- [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+- [x] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+- [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+- [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
+- [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+- [x] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+- [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 ### Two Pointers
 
-- [ ] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-- [ ] [Two Sum II Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-- [ ] [3Sum](https://leetcode.com/problems/3sum/)
-- [ ] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
-- [ ] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [x] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+- [x] [Two Sum II Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- [x] [3Sum](https://leetcode.com/problems/3sum/)
+- [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+- [x] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 
 ### Stack
 
-- [ ] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [ ] [Min Stack](https://leetcode.com/problems/min-stack/)
+- [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+- [x ] [Min Stack](https://leetcode.com/problems/min-stack/)
 - [ ] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 - [ ] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 - [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
@@ -40,7 +40,7 @@
 
 ### Binary Search
 
-- [ ] [Binary Search](https://leetcode.com/problems/binary-search/)
+- [x] [Binary Search](https://leetcode.com/problems/binary-search/)
 - [ ] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 - [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 - [ ] [Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
