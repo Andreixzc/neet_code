@@ -31,11 +31,11 @@
 ### Stack
 
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [x ] [Min Stack](https://leetcode.com/problems/min-stack/)
-- [ ] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
-- [ ] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
-- [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- [ ] [Car Fleet](https://leetcode.com/problems/car-fleet/)
+- [x] [Min Stack](https://leetcode.com/problems/min-stack/)
+- [x] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+- [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+- [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+- [x] [Car Fleet](https://leetcode.com/problems/car-fleet/)
 - [ ] [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
 ### Binary Search
