@@ -21,8 +21,10 @@ int minEatingSpeed(vector<int>& piles, int h) {
     int left = 1;
     while (left <= right) {
         int k = (left + right) / 2;
-        if (!possible(piles, h, k))left = k + 1;
-        else right = k - 1;
+        if (!possible(piles, h, k))
+            left = k + 1;
+        else
+            right = k - 1;
     }
 
     return left;
