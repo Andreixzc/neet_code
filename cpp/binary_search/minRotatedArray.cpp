@@ -11,7 +11,7 @@ int findMin(vector<int> &nums) {
     int right = nums.size() - 1;
     while (left < right) {
         int mid = (left + right) / 2;
-        if (nums[mid] > right)
+        if (nums[mid] > nums[right])
             left = mid + 1;
         else
             right = mid;
@@ -22,6 +22,6 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     vector<int> array = {4, 5, 6, 1, 2, 3};
-    cout << findMin(array) << endl;
+    // cout << findMin(array) << endl;
     return 0;
 }
