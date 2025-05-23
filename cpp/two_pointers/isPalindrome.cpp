@@ -5,33 +5,44 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(), x.end()
 #define endl '\n'
+#include <string>
+using namespace std;
 
 bool isPalindrome(string s) {
-    int i = 0;
-    int j = s.length() - 1;
-    while (i < j) {
-        if (!isalnum(s[i])) {
-            i++;
-            continue;
+    int l = 0;
+    int r = s.length() - 1;
+
+    while (l < r) {
+        while (l < r && !((s[l] >= 'a' && s[l] <= 'z') || (s[l] >= 'A' && s[l] <= 'Z') ||
+                          (s[l] >= '0' && s[l] <= '9'))) {
+            l++;
         }
-        if (!isalnum(s[j])) {
-            j--;
-            continue;
+        while (r > l && !((s[r] >= 'a' && s[r] <= 'z') || (s[r] >= 'A' && s[r] <= 'Z') ||
+                          (s[r] >= '0' && s[r] <= '9'))) {
+            r--;
         }
-        if (s[i] >= 65 && s[i] <= 90) s[i] = s[i] + 32;
-        if (s[j] >= 65 && s[j] <= 90) s[j] = s[j] + 32;
-        if (s[i] != s[j]) return false;
-        i++;
-        j--;
+
+        char cl = s[l];
+        char cr = s[r];
+
+        if (cl >= 'A' && cl <= 'Z') cl += 32;
+        if (cr >= 'A' && cr <= 'Z') cr += 32;
+
+        if (cl != cr) return false;
+
+        l++;
+        r--;
     }
+
     return true;
 }
 
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
+    string s = "Was it a car or a cat I saw?";
+    cout << s[s.length() - 1] << endl;
+    isPalindrome(s);
 
-    string s = "0P";
-    cout << isPalindrome(s) << endl;
     return 0;
 }

@@ -19,7 +19,8 @@ class Solution:
 
 
 def main():
-    print("hello")
+    
+
 
 
 if __name__ == "__main__":

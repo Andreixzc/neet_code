@@ -6,28 +6,28 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define endl '\n'
 
-void dfs(int open, int close, string current, vector<string> &ans, int n) {
-    if (open == close && open + close == 2 * n) {
+void dfs(int openCount, int closeCount, string current, int n, vector<string>& ans) {
+
+    if (openCount == closeCount && openCount + closeCount == 2 * n) {
         ans.push_back(current);
         return;
     }
-    if (open < n) dfs(open + 1, close, current + "(", ans, n);
-    if (close < open) dfs(open, close + 1, current + ")", ans, n);
+    if (openCount < n) dfs(openCount + 1, closeCount, current + '(', n, ans);
+    if (closeCount < openCount) dfs(openCount, closeCount + 1, current + ')', n, ans);
 }
 
 vector<string> generateParenthesis(int n) {
     vector<string> ans;
-    dfs(1, 0, "(", ans, n);
+    string start = "(";
+    dfs(1, 0, start, n, ans);
     return ans;
 }
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    int n = 3;
-    vector<string> ans = generateParenthesis(n);
-    for (auto element : ans) {
-        cout << element << endl;
-    }
+    vector<string> ans;
+    ans = generateParenthesis(10000);
+    for (auto& element : ans) cout << element << endl;
 
     return 0;
 }
