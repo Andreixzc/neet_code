@@ -12,20 +12,25 @@ int findMin(vector<int>& nums) {
     int right = nums.size() - 1;
     while (left < right) {
         int mid = (right + left) / 2;
-        if (nums[mid] > nums[right])
-            left = mid + 1;
-        else
-            right = mid;
+        if (nums[mid] == target) return mid;
+        if (nums[left] < nums[mid]) { // porção left -> mid está ordenada. Preciso verificar se meu
+                                      // numero pode estar la.
+            if (nums[left] > target) {
+                // se o menor valor da porção exceder o target, meu numero está na porção mid ->
+                // right;
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
     }
-    return nums[left];
+    return -1;
 }
 int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
-    vector<int> input = { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, -2,
-                          -1, 0,  1,  2,  3,  4,  5,  6,  7,  8,  9 };
-
-    cout << findMin(input) << endl;
+    vector<int> input = { 3, 4, 5, 6, 1, 2 };
+    int target = 1;
 
     return 0;
 }
