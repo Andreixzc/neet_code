@@ -1,38 +1,38 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
-void dfs(vector<int>& nums, vector<vector<int>>& ans, vector<int>& current, int i) {
-    if (i >= nums.size()) {
+#define ll long long
+#define pb push_back
+#define all(x) x.begin(), x.end()
+#define endl '\n'
+
+void dfs(int control, vector<vector<int>>& ans, vector<int>& current, vector<int>& nums) {
+
+    if (control == nums.size()) {
         ans.push_back(current);
         return;
     }
-    current.push_back(nums[i]);
-    dfs(nums, ans, current, i + 1);
+
+    current.push_back(nums[control]);
+    dfs(control + 1, ans, current, nums);
     current.pop_back();
-    dfs(nums, ans, current, i + 1);
+    dfs(control + 1, ans, current, nums);
 }
 
 vector<vector<int>> subsets(vector<int>& nums) {
-
     vector<vector<int>> ans;
     vector<int> current;
-    dfs(nums, ans, current, 0);
-
+    dfs(0, ans, current, nums);
     return ans;
 }
-
 int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     vector<int> nums = { 1, 2, 3 };
-    vector<vector<int>> result = subsets(nums);
-
-    for (auto& subset : result) {
-        cout << "[";
-        for (int i = 0; i < subset.size(); i++) {
-            cout << subset[i];
-            if (i < subset.size() - 1) cout << ",";
-        }
-        cout << "] ";
+    auto xd = subsets(nums);
+    for (auto element : xd) {
+        for (auto inner : element) cout << inner << endl;
     }
+
     return 0;
 }
