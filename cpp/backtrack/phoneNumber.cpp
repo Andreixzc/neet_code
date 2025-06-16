@@ -23,6 +23,7 @@ void dfs(vector<string>& ans, string digits, string current, int start) {
 }
 
 vector<string> letterCombination(strings digits) {
+    if (digits.length() == 0) return {};
     vector<string> ans;
     dfs(ans, digits, "", 0);
     return ans;
