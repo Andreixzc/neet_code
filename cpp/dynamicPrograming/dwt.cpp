@@ -27,6 +27,6 @@ int main() {
     vector<int> seq2 = { 1, 6, 5, 1, 8, 6, 1, 9 };
     auto dist = dwt(seq1, seq2);
 
-    cout << "DTW distance: " << dist[seq1.size()][seq2.size()] << endl;
+    cout << "distancia: " << dist[seq1.size()][seq2.size()] << endl;
     return 0;
 }
