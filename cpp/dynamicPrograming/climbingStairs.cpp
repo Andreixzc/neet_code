@@ -6,41 +6,28 @@ using namespace std;
 #define all(x) x.begin(), x.end()
 #define endl '\n'
 
-// recursive approach
-
-int dp(int n, vector<int>& memo) {
-
-    if (n <= 0) return 0;
+int dp(vector<int>& memo, int n) {
     if (memo[n] != -1) return memo[n];
-    return memo[n] = dp(n - 1, memo) + dp(n - 2, memo);
+    return memo[n] = dp(memo, n - 1) + dp(memo, n - 2);
 }
-
-int climbingStairsRec(int n) {
+int climbStairsRecursive(int n) {
     vector<int> memo(n + 1, -1);
+    memo[0] = 0;
     memo[1] = 1;
     memo[2] = 2;
-    return dp(n, memo);
+    return dp(memo, n);
 }
-
-// 1d dp:
-
 int climbStairs(int n) {
-    if (n <= 2) return n;
-
-    vector<int> stairs(n + 1);
-    stairs[1] = 1;
-    stairs[2] = 2;
-
-    for (int i = 3; i <= n; i++) stairs[i] = stairs[i - 1] + stairs[i - 2];
-
-    return stairs[n];
+    vector<int> dp(n + 1);
+    dp[0] = 0;
+    dp[1] = 1;
+    dp[2] = 2;
+    for (int i = 3; i <= n; i++) dp[i] = dp[i - 1] + dp[i - 2];
+    return dp[n];
 }
 int main() {
-
     ios::sync_with_stdio(0);
     cin.tie(0);
-    cout << climbStairs(10) << endl;
-    cout << climbingStairsRec(10) << endl;
-
+    cout << climbStairsRecursive(6) << endl;
     return 0;
 }
