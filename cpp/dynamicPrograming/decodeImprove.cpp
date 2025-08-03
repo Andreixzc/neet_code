@@ -17,6 +17,7 @@ int dp(string s, int start, unordered_map<int, int>& memo) {
     int result = 0;
 
     string oneChar = s.substr(start, 1);
+    cout << oneChar << endl;
     if (oneChar[0] != '0') {
         int val = stoi(oneChar);
         if (val >= 1 && val <= 26) {
@@ -26,6 +27,7 @@ int dp(string s, int start, unordered_map<int, int>& memo) {
 
     if (start + 1 < s.length()) {
         string twoChar = s.substr(start, 2);
+        cout << twoChar << endl;
         if (twoChar[0] != '0') {
             int val = stoi(twoChar);
             if (val >= 1 && val <= 26) {
