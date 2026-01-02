@@ -7,20 +7,19 @@ from collections import defaultdict, deque
 
 
 class Solution:
-    def twoSum(self, nums, target):
-        myMap = {}
-        i = 0
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        myset = set()
         for num in nums:
-            currentTarget = target - num
-            if currentTarget in myMap:
-                return [myMap[currentTarget], i]
-            myMap[num] = i
-            i += 1
+            if num in myset:
+                return True
+            myset.add(num)
+        return False
 
 
 def main():
-    
-
+    s = Solution()
+    data = [1, 2, 3]
+    print(s.hasDuplicate(data))
 
 
 if __name__ == "__main__":

@@ -5,14 +5,17 @@ using namespace std;
 #define pb push_back
 #define all(x) x.begin(), x.end()
 #define endl '\n'
-int trap(vector<int>& height) {
-    int left = 0;
-    int right = height.size() - 1;
-    while (left < right) {
+bool hasDuplicate(vector<int>& nums) {
+    unordered_set<int> set;
+    for (int i = 0; i < nums.size(); i++) {
+        if (set.find(nums[i]) != set.end()) return true;
+        set.insert(nums[i]);
     }
-    return 0;
+    return false;
 }
+
 int main() {
+
     ios::sync_with_stdio(0);
     cin.tie(0);
 
