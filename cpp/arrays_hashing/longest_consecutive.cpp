@@ -20,10 +20,10 @@ int longestConsecutive(vector<int>& nums) {
             tmp--;
         }
         best = max(best, curr_seq);
-        curr_seq = 0;
+        curr_seq = 1;
     }
 
-    return best++;
+    return best;
 }
 int main() {
 
