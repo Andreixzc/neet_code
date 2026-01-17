@@ -7,6 +7,7 @@ using namespace std;
 #define endl '\n'
 
 int carFleet(int target, vector<int>& position, vector<int>& speed) {
+    int ans = 1;
     int n = position.size();
     if (n == 0) return 0;
     vector<pair<int, int>> cars;
@@ -26,13 +27,18 @@ int carFleet(int target, vector<int>& position, vector<int>& speed) {
         if (st.empty()) {
             st.push(arrival[i]);
         } else {
-            if (arrival[i] > st.top()) {
+
+            if (arrival[i] <= st.top()) {
+                continue;
+
+            } else {
+                ans++;
                 st.push(arrival[i]);
             }
         }
     }
 
-    return st.size();
+    return ans;
 }
 
 int main() {
