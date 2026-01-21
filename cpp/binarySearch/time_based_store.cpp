@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define ll long long
 #define pb push_back
 #define all(x) x.begin(), x.end()
@@ -9,6 +8,7 @@ using namespace std;
 class TimeMap {
   public:
     unordered_map<string, vector<pair<int, string>>> mymap;
+
     TimeMap() {
     }
 
@@ -20,7 +20,9 @@ class TimeMap {
         int left = 0;
         int right = mymap[key].size() - 1;
         vector<pair<int, string>>& cp = mymap[key];
+
         if (cp.size() == 0) return "";
+
         while (left <= right) {
             int mid = (right + left) / 2;
             if (timestamp >= cp[mid].first)
@@ -29,7 +31,7 @@ class TimeMap {
                 right = mid - 1;
         }
 
-        if (right > 0) {
+        if (right >= 0) {
             return cp[right].second;
         }
         return "";
@@ -37,9 +39,7 @@ class TimeMap {
 };
 
 int main() {
-
     ios::sync_with_stdio(0);
     cin.tie(0);
-
     return 0;
 }
