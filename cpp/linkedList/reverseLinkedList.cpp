@@ -16,18 +16,20 @@ struct ListNode {
 };
 
 ListNode* reverseList(ListNode* head) {
+    ListNode* reverseList(ListNode * head) {
 
-    ListNode* prev = nullptr;
-    ListNode* current = head;
+        ListNode* prev = nullptr;
+        ListNode* current = head;
 
-    while (current != nullptr) {
-        ListNode* tmpNext = current->next;
-        current->next = prev;
-        prev = current;
-        current = tmpNext;
+        while (current != nullptr) {
+            ListNode* tmpNext = current->next;
+            current->next = prev;
+            prev = current;
+            current = tmpNext;
+        }
+
+        return prev;
     }
-
-    return prev;
 }
 
 void printList(ListNode* head) {
