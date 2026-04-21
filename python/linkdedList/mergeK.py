@@ -10,8 +10,7 @@ class Solution:
             self.val = val
             self.next = next
 
-    def merge(l1, l2):
-
+    def merge(self, l1, l2):
         if not l1:
             return l2
         if not l2:
@@ -26,8 +25,7 @@ class Solution:
 
         head = it
 
-        while l1 or l2:
-
+        while l1 and l2:
             if l1.val < l2.val:
                 it.next = l1
                 it = l1
@@ -38,17 +36,20 @@ class Solution:
                 l2 = l2.next
 
         if l1:
-            it.next = l2
-        else:
             it.next = l1
+        else:
+            it.next = l2
 
         return head
 
     def mergeKLists(
         self, lists: List[Optional[ListNode]]
     ) -> Optional[ListNode]:
+
+        if not lists:
+            return None
         for i in range(1, len(lists)):
-            lists[i] = self.merge(lists[lists[i], lists[i - 1]])
+            lists[i] = self.merge(lists[i], lists[i - 1])
         return lists[-1]
 
 
