@@ -13,19 +13,23 @@ class Solution:
             self.right = right
 
     def maxDepth(self, root):
+        if not root:
+            return 0
 
-        stack = [[root, 1]]
-        res = 0
+        ans = 0
+        stack = [[1,root]]
 
         while stack:
-            node, depth = stack.pop()
+            depth, node = stack.pop()
+            ans = max(depth,ans)
 
-            if node:
-                res = max(depth, res)
-                stack.append([node.left, depth + 1])
-                stack.append([node.right, depth + 1])
+            if node.left:
+                stack.append([depth + 1, node.left])
+            
+            if node.right:
+                stack.append([depth + 1, node.right])
 
-        return res
+       return ans 
 
 
 def main():
