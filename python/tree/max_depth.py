@@ -12,24 +12,39 @@ class Solution:
             self.left = left
             self.right = right
 
+    def dfs(self, node, current_height):
+        if not node:
+            return current_height
+
+        return max(
+            self.dfs(node.left, current_height + 1),
+            self.dfs(node.right, current_height + 1),
+        )
+
+    def maxDepthRec(self, root):
+
+        if not root:
+            return 0
+
+        return self.dfs(root, 0)
+
     def maxDepth(self, root):
+
         if not root:
             return 0
 
         ans = 0
-        stack = [[1,root]]
+        stack = [(root, 1)]
 
         while stack:
-            depth, node = stack.pop()
-            ans = max(depth,ans)
+            node = stack.pop()
+            ans = max(node[1], ans)
+            if node[0].left:
+                stack.append((node[0].left, node[1] + 1))
+            if node[0].right:
+                stack.append((node[0].right, node[1] + 1))
 
-            if node.left:
-                stack.append([depth + 1, node.left])
-            
-            if node.right:
-                stack.append([depth + 1, node.right])
-
-       return ans 
+        return ans
 
 
 def main():
